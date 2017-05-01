@@ -7,7 +7,8 @@ const Menu = ({ items }) => {
   ))
 
   return (
-    <div className="Menu">
+    <div id="menu">
+      <h3 className="text-center">Menu</h3>
     	{menuItems}
     </div>
   );

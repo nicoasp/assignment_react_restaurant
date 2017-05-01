@@ -1,19 +1,26 @@
-import React from 'react'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
-const MenuItem = ({item}) => {
-  const {name, description, price} = item
+class MenuItem extends Component {
+  render() {
+    const {name, description, price} = this.props.item;
 
-  return (
-		<div className="panel panel-default">
-		  <div className="panel-heading">
-		    <h3 className="panel-title">{name}</h3>
-		  </div>
-		  <div className="panel-body">
-		    <p>{description}</p>
-		    <p>{price}</p>
-		  </div>
-		</div>
-  )
+    return (
+  		<div className="panel panel-default">
+  		  <div className="panel-heading">
+  		    <h3 className="panel-title">{name}</h3>
+  		  </div>
+  		  <div className="panel-body">
+  		    <p>{description}</p>
+  		    <p>{price}</p>
+  		  </div>
+  		</div>
+    )
+  }
 }
 
-export default MenuItem
+MenuItem.propTypes = {
+  item: PropTypes.object
+};
+
+export default MenuItem;
