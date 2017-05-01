@@ -1,12 +1,17 @@
 import React from 'react';
 
+const banana = () => {
+	let nameInput = document.getElementById('name');
+	nameInput.innerHTML("banana");
+}
+
 const ReservationForm = () => {
   return (
 		<form>
       <h3 id="reservation-form" className="text-center">Make a Reservation</h3>
 		  <div className="form-group">
 		    <label htmlFor="name">Name</label>
-		    <input type="text" className="form-control" id="name" placeholder="Name" value="Jerry" />
+		    <input type="text" className="form-control" id="name" placeholder="Name" value="Jerry" onChange={banana}/>
 		  </div>
 		  <div className="form-group">
 		    <label htmlFor="email">Email address</label>

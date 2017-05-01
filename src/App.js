@@ -8,14 +8,6 @@ import ReservationForm from './ReservationForm';
 import Menu from './Menu';
 import GoogleMap from './Map';
 
-const mainHeader = {
-  image: {
-    url: 'restaurant.jpg',
-    alt: 'A lovely restaurant'
-  },
-  headline: 'A Beautiful Restaurant',
-  tagline: 'This is a website about a beautiful restaurant'
-};
 
 const items = [
   {
@@ -32,7 +24,8 @@ const items = [
     name: "Thick juicy cheeseburger",
     description: 'It is thick. It is juicy. It is a burger.',
     price: '$69'
-  }
+  },
+  "notanobject"
 ];
 
 const address = "Spalenring 15 Basel"
@@ -43,7 +36,7 @@ class App extends Component {
       <div>
         <NavBar />
         <div className="container">
-          <Header props={mainHeader} />
+          <Header />
           <ReservationForm />
           <Menu items={items} />
           <GoogleMap address={address} />
